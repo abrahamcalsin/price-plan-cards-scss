@@ -1,0 +1,173 @@
+/* Colors */
+$--color-primary: #000446;
+$--color-secondary: #fdbd4a;
+$--color-default: #fff;
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #eceffc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+@media (min-width: 997px) {
+  body {
+    padding: 0;
+    height: 100vh;
+  }
+}
+
+//Container cards
+.container-card-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+//Plan Cards
+.plan-card {
+  background: $--color-default;
+  width: 210px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 13px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  border-bottom: 4px solid $--color-primary;
+  box-shadow: 0 6px 30px rgba(207, 212, 222, 0.3);
+
+  h2 {
+    margin-bottom: 19px;
+    font-size: 20px;
+    font-weight: 500;
+
+    span {
+      display: block;
+      margin-top: 3px;
+      color: #4d4d4d;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  .etiquet-price {
+    position: relative;
+    background: $--color-secondary;
+    width: 244px;
+    margin-left: -24px;
+    padding: 15px 24px;
+    border-radius: 5px 0 0 5px;
+
+    p {
+      margin: 0;
+      padding-top: 7px;
+      display: flex;
+      font-size: 33px;
+      font-weight: 500;
+
+      &:before {
+        content: "$";
+        margin-right: 5px;
+        font-size: 15px;
+        font-weight: 300;
+      }
+      &:after {
+        content: "/ handle";
+        margin-left: 5px;
+        font-size: 15px;
+        font-weight: 300;
+      }
+    }
+    div {
+      position: absolute;
+      bottom: -23px;
+      right: 0px;
+      width: 0;
+      height: 0;
+      border-top: 13px solid #c58102;
+      border-bottom: 10px solid transparent;
+      border-right: 13px solid transparent;
+      z-index: -6;
+    }
+  }
+
+  .benefits-list {
+    margin-top: 35px;
+
+    ul {
+      padding: 0;
+      font-size: 14px;
+
+      li {
+        color: #4d4d4d;
+        list-style: none;
+        margin-bottom: 15px;
+
+        span {
+          font-weight: 300;
+        }
+        span:first-child {
+          margin-right: 13px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .button-get-plan {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+
+    a {
+      background: $--color-primary;
+      color: $--color-default;
+      padding: 10px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 400;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3%);
+        box-shadow: 0 3px 10px rgba(207, 212, 222, 0.9);
+      }
+
+      span:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/*----*/
+.my-social-media {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  font-size: 25px;
+
+  a {
+    transition: all 0.3s ease;
+
+    &:hover {
+      font-size: 26px;
+    }
+  }
+  a:first-child {
+    color: #1e2329;
+  }
+  a:nth-child(2) {
+    color: #1da1f2;
+    margin: 0 15px;
+  }
+  a:last-child {
+    color: #d12c84;
+  }
+}
